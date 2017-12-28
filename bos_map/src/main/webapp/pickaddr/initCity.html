@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+	<link rel="stylesheet" href="css/city-picker.css">
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="city-picker.data.js"></script>
+	<script type="text/javascript" src="city-picker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#city-picker1").citypicker({
+				province: '浙江省',
+				city: '杭州市',
+				district: '江干区'
+			});
+			
+			
+		});
+		function toreset(){
+			$("#city-picker1").citypicker('reset');
+		}
+		
+	</script>
+</head>
+<body>
+	<div style="position: relative;"><!-- container -->
+	  <input id="city-picker1" type="text" size="60">
+	  <input type="button" id="aaaa" onclick="toreset()" value="resetsss"> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			html{height:100%}  
+			body{height:100%;margin:0px;padding:0px}  
+			#container{height:100%} 
+		</style>
+		<link type="text/css" rel="stylesheet" href="css/city-picker.css"/>
+		
+		<script src="jquery.js"></script><!-- jQuery is required -->
+		<script src="city-picker.data.js"></script>
+		<script src="city-picker.js"></script>
+	</head>
+	<body>
+		<form action="" method="post" onsubmit="return validForm()">
+			<div style="position: relative;"><!-- container -->
+			  <input name="addr" readonly size="30" type="text"  placeholder="请选择省/市/区" >
+			</div>
+			<input type="submit">
+		</form>
+	</body>
+	<script type="text/javascript"> 
+		$("input[name='addr']").citypicker();
+		
+		$("input[name='addr']").citypicker('reset');
+		$("input[name='addr']").citypicker('destroy');
+		
+		$("input[name='addr']").citypicker({
+			province:'山东省',
+			city:"济南市",
+			district:"历城区"
+		});
+		
+		
+		function validForm(){
+			alert($("[name='addr']").val());
+			return true;
+		}
+	</script>  
+</html>
